@@ -9,7 +9,7 @@ def ndarray_to_rgb(ndarray):
     return re.upper()
 
 
-imgfn = '152380.jpg'
+imgfn = 'input.jpg'
 img = cv2.imread(imgfn, cv2.IMREAD_COLOR)[:, :, ::-1]
 
 
@@ -37,6 +37,6 @@ for row in range(lng):
     ws01.row_dimensions[row+1].height = pix*409.50/546
 
 
-excelfn = 'test.xlsx'
+excelfn = 'output.xlsx'
 print(f'save to {excelfn}')
 wb.save(excelfn)
